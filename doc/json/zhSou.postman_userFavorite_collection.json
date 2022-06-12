@@ -5,34 +5,7 @@
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
-		{
-			"name": "localhost:8081/getFavoritesByUser",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDUzNDcsInN1YiI6MX0.f_D4wY50sN1Rom1avicGFV0jUObZiCUAftEPfvAGJ_QEEjUkx1DH4_NIyTluZgXoTSGxm4dz43lYf1X3Hb8S4w",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "localhost:8081/getFavoritesByUser",
-					"host": [
-						"localhost"
-					],
-					"port": "8081",
-					"path": [
-						"getFavoritesByUser"
-					]
-				}
-			},
-			"response": []
-		},
+		
 		{
 			"name": "localhost:8081/addFolder?name=新建收藏夹",
 			"request": {
@@ -286,14 +259,57 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8081/getFavoriteByFolder?folderName=测试收藏夹",
+			"name": "localhost:8081/getFavoriteByFolder",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTUwOTcyODcsInN1YiI6MX0.OAEHWjTw6D2Xvmmkm6AWrSCDHQ0TMQj4ACRl6VcW_WkDLrh0-NQE26aTuhuW__uj-G650t905-J5XX-wiQToLQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "folderName",
+							"value": "111",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/getFavoriteByFolder",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getFavoriteByFolder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/getFavoritesByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTUwOTcyODcsInN1YiI6MX0.OAEHWjTw6D2Xvmmkm6AWrSCDHQ0TMQj4ACRl6VcW_WkDLrh0-NQE26aTuhuW__uj-G650t905-J5XX-wiQToLQ",
 							"type": "string"
 						}
 					]
@@ -301,19 +317,13 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/getFavoriteByFolder?folderName=测试收藏夹",
+					"raw": "localhost:8081/getFavoritesByUser",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
-						"getFavoriteByFolder"
-					],
-					"query": [
-						{
-							"key": "folderName",
-							"value": "测试收藏夹"
-						}
+						"getFavoritesByUser"
 					]
 				}
 			},

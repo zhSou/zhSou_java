@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "75738e81-06fe-4842-ad34-e5cd99225df9",
+		"name": "zhsou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+
+		{
+			"name": "localhost:8081/getArticle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTUwOTcyODcsInN1YiI6MX0.OAEHWjTw6D2Xvmmkm6AWrSCDHQ0TMQj4ACRl6VcW_WkDLrh0-NQE26aTuhuW__uj-G650t905-J5XX-wiQToLQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\":\"游戏\",\r\n    \"filterWord\":[\"手机\"],\r\n    \"page\":1,\r\n    \"limit\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/getArticle",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getArticle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
