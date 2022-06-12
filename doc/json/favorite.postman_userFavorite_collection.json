@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "f1f046f8-740c-4866-a1f8-4e09bf091655",
+		"name": "favorite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/getFavoritesByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDUzNDcsInN1YiI6MX0.f_D4wY50sN1Rom1avicGFV0jUObZiCUAftEPfvAGJ_QEEjUkx1DH4_NIyTluZgXoTSGxm4dz43lYf1X3Hb8S4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getFavoritesByUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getFavoritesByUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/addFolder?name=新建收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/addFolder?name=新建收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"addFolder"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "新建收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/delFolder?folderName=新建收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/delFolder?folderName=新建收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"delFolder"
+					],
+					"query": [
+						{
+							"key": "folderName",
+							"value": "新建收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/reNameFolder?oldName=testFolder1&newName=测试收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/reNameFolder?oldName=testFolder1&newName=测试收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reNameFolder"
+					],
+					"query": [
+						{
+							"key": "oldName",
+							"value": "testFolder1"
+						},
+						{
+							"key": "newName",
+							"value": "测试收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/getFolderByUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getFolderByUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getFolderByUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/addFavorite?aid=5&folderName=默认收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/addFavorite?aid=5&folderName=默认收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"addFavorite"
+					],
+					"query": [
+						{
+							"key": "aid",
+							"value": "5"
+						},
+						{
+							"key": "folderName",
+							"value": "默认收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/delFavorite?aid=5&folderName=默认收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/delFavorite?aid=5&folderName=默认收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"delFavorite"
+					],
+					"query": [
+						{
+							"key": "aid",
+							"value": "5"
+						},
+						{
+							"key": "folderName",
+							"value": "默认收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/updateFavorite?aid=6&oldName=默认收藏夹&newName=测试收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/updateFavorite?aid=6&oldName=默认收藏夹&newName=测试收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateFavorite"
+					],
+					"query": [
+						{
+							"key": "aid",
+							"value": "6"
+						},
+						{
+							"key": "oldName",
+							"value": "默认收藏夹"
+						},
+						{
+							"key": "newName",
+							"value": "测试收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/getFavoriteByFolder?folderName=测试收藏夹",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDgyMTgsInN1YiI6MX0.QLY9omqDhPC3j2dD8sLhERPNBURTI01Tq_kOdNq5lf-HXTgDrYa7mhR5ehAZcfiBmIUhNFI73zLxVrn1Y0cYYg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getFavoriteByFolder?folderName=测试收藏夹",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getFavoriteByFolder"
+					],
+					"query": [
+						{
+							"key": "folderName",
+							"value": "测试收藏夹"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

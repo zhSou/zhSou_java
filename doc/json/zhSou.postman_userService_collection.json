@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "c70016c9-92b7-4b8b-9c96-902bc54d0bb7",
+		"name": "zhSou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDUzNDcsInN1YiI6MX0.f_D4wY50sN1Rom1avicGFV0jUObZiCUAftEPfvAGJ_QEEjUkx1DH4_NIyTluZgXoTSGxm4dz43lYf1X3Hb8S4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "dai",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/login?userName=dai&password=123456",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "dai"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDU3MjcsInN1YiI6Mn0.JUlGjKGldDSH7a9qndfO8Gdpyc9CBXBld3-q85mWNF_218_zvR0yK8HoILcloB4tQTFa5GsJpvn71u73XZ5tXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/register?userName=testUser&password=123456&email=111@qq.com",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/register?userName=testUser&password=123456&email=111@qq.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "testUser"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						},
+						{
+							"key": "email",
+							"value": "111@qq.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/getUserInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDUzNDcsInN1YiI6MX0.f_D4wY50sN1Rom1avicGFV0jUObZiCUAftEPfvAGJ_QEEjUkx1DH4_NIyTluZgXoTSGxm4dz43lYf1X3Hb8S4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/getUserInfo",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/delUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NTI5NDYyNjQsInN1YiI6M30.RgB2imB9leIw_jY21_-j6eADq2ZI3ycA1qUgSADFYP1kvX_7PwyuKS8eK46V0S3vB8jQ1-MQ4YDsB7Aq7FGTcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/delUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"delUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
