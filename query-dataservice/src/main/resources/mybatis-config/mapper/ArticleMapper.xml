@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gislab.zhsou.querydataservice.mapper.ArticleMapper">
+
+
+    <select id="getArticle" resultType="com.gislab.zhsou.common.service.entity.ArticleModel">
+        select  aid, url ,raw
+        from  article
+        <where>
+            deleted = 'f' and
+            <if test = "s !=null " >
+                vector @@to_tsquery('chinese',#{s})
+            </if>
+        </where>
+    </select>
+
+    <select id="getArticleWithFilter"
+            resultType="com.gislab.zhsou.common.service.entity.ArticleModel">
+        select  aid, url ,raw
+        from  article
+        <where>
+            deleted = 'f' and
+            <if test = "s !=null " >
+                vector @@to_tsquery('chinese',#{s})
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: zhSou.user-management
+  datasource:
+    url: jdbc:postgresql://192.168.41.20:5432/zhsou
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 100
+      initial-size: 8
+      min-idle: 8
+      max-wait: 6000
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+    timeout: 30000
+  protocol:
+    host: 127.0.0.1
+    name: dubbo
+    port: 20882
+mybatis:
+  config-location: classpath:mybatis-config/mybatis-config.xml
+  mapper-locations: classpath:mybatis-config/mapper/*.xml

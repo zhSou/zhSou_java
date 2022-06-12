@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gislab.zhsou.usermanagement.mapper.UserFavoriteMapper">
+
+    <insert id="addFavorite">
+        INSERT INTO favorite (uid, aid, name, date) VALUES (#{uid}, #{aid}, #{folderName}, #{time})
+    </insert>
+
+    <update id="delFavorite">
+        UPDATE favorite SET deleted = true WHERE uid = #{uid} AND aid = #{aid} AND name = #{folderName} AND
+        deleted = false
+    </update>
+
+    <insert id="addFolder">
+        INSERT INTO folder (uid, name, date) VALUES (#{uid}, #{folderName}, #{time})
+    </insert>
+
+    <update id="delFolder">
+        UPDATE folder SET deleted = true WHERE uid = #{uid} AND name = #{folderName} AND deleted = false
+    </update>
+
+    <update id="reNameFolder">
+        UPDATE folder SET name = #{newName} WHERE uid = #{uid} AND name = #{oldName} AND deleted = false
+    </update>
+
+    <update id="delFavoriteByFolder">
+        UPDATE favorite SET deleted = true WHERE uid = #{uid} AND name = #{folderName} AND deleted = false
+    </update>
+
+    <update id="reNameFavoriteByFolder">
+        UPDATE favorite SET name = #{newName} WHERE uid = #{uid} AND name = #{oldName} AND deleted = false
+    </update>
+
+    <select id="getFolderByUser" resultType="java.lang.String">
+        SELECT name FROM folder WHERE uid = #{uid} AND deleted = false ORDER BY date ASC
+    </select>
+
+    <select id="getArticleByFolder" resultType="java.lang.Integer">
+     SELECT aid FROM favorite
+     WHERE uid = #{uid} AND name = #{folderName} AND deleted = false
+    </select>
+
+    <update id="delFolderAll">
+        UPDATE folder SET deleted = true WHERE uid = #{uid} AND deleted = false
+    </update>
+
+    <update id="delFavoriteAll">
+        UPDATE favorite SET deleted = true WHERE uid = #{uid} AND delete = false
+    </update>
+
+    <select id="checkFolder" resultType="boolean">
+        SELECT EXISTS (SELECT fid FROM folder WHERE uid = #{uid} AND name = #{folderName} AND deleted = false LIMIT 1)
+    </select>
+
+    <update id="updateFavoriteFolder">
+        UPDATE favorite SET name = #{newName} WHERE uid = #{uid} AND aid = #{aid} AND name = #{oldName} AND
+        deleted = false
+    </update>
+
+    <select id="getFavoriteIdByUser" resultType="java.lang.Long">
+        SELECT aid FROM favorite WHERE uid = #{uid} AND deleted = false
+    </select>
+</mapper>

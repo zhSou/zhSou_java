@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zhSou.gateway
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+    timeout: 30000
+  protocol:
+    host: 127.0.0.1
+    name: dubbo
+    port: 20880
+server:
+  port: 8081
